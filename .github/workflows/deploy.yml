@@ -43,7 +43,7 @@ jobs:
       with:
         source: "node/server.js"
         target: "/apps/nodejs"
-        strip_components: 1
+        strip_components: 2
 
     # Runs a single command using the runners shell
     #- name: Run a one-line script
