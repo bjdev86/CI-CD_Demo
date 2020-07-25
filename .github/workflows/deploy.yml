@@ -43,6 +43,7 @@ jobs:
       with:
         source: "node/server.js"
         target: "/apps/nodejs"
+        # I don't know why I need to strip two leading components
         strip_components: 2
 
     # Runs a single command using the runners shell
