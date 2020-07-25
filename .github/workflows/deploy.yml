@@ -41,7 +41,7 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "node_src/."
+        source: "node_src/server.js"
         target: "/apps/nodejs"
 
     # Runs a single command using the runners shell
