@@ -30,7 +30,7 @@ jobs:
         PORT: ${{ secrets.PORT }}
       with:
         source: "index.html"
-        target: "/var/www/digitalagconsultants"
+        target: "/var/www/digitalagconsultants.com"
 
     # Runs a single command using the runners shell
     #- name: Run a one-line script
