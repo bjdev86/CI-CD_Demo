@@ -1,0 +1,20 @@
+{
+  "name": "CI-CD_Demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjdev86/CI-CD_Demo.git"
+  },
+  "keywords": [],
+  "author": "Ben Miller <bjmiller86@gmail.com> (http://digitalagconsultants.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjdev86/CI-CD_Demo/issues"
+  },
+  "homepage": "https://github.com/bjdev86/CI-CD_Demo#readme"
+}
