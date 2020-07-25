@@ -41,7 +41,7 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "server.js"
+        source: "node/server.js"
         target: "/apps/nodejs"
         strip_components: 1
 
