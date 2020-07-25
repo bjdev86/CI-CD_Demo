@@ -41,9 +41,9 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "./node/server.js"
+        source: "node/server.js"
         target: "/apps/nodejs"
-        strip_components: 1
+        #strip_components: 1
 
     # Runs a single command using the runners shell
     #- name: Run a one-line script
