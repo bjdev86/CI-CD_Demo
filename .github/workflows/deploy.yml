@@ -41,7 +41,7 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "node/server.js"
+        source: "server.js"
         target: "/apps/nodejs"
         strip_components: 2 # Remove the two folder levels above server.js
     
