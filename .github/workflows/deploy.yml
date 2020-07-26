@@ -43,15 +43,15 @@ jobs:
       with:
         source: "node/server.js"
         target: "/apps/nodejs"
-        # I don't know why I need to strip two leading components
-        strip_components: 2
-
-    # Runs a single command using the runners shell
-    #- name: Run a one-line script
-    #  run: echo Hello, world!
-
-    # Runs a set of commands using the runners shell
-    #- name: Run a multi-line script
-    # run: |
-    #    echo Add other actions to build,
-    #    echo test, and deploy your project.
+        strip_components: 2 # Remove the two folder levels above server.js
+    
+    # Execute PM2 restart command on the server code just uploaded
+    - name: Execute PM2 restart command on server.js
+      uses: appleboy/ssh-action@master
+      env:
+        HOST: ${{ secrets.HOST }} 
+        USERNAME: ${{ secrets.USERNAME }} 
+        PASSWORD: ${{ secrets.PASSWORD }}
+        PORT: ${{ secrets.PORT }}
+      with:
+        script: pm2 restart server
