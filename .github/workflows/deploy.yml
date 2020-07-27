@@ -41,8 +41,8 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "node/package.json"
-        target: "/apps/nodejs"
+        source: "server.js"
+        target: "/var/www/digitalagconsultants.com"
         strip_components: 2 # Remove the two folder levels above server.js
     
     # Execute PM2 restart command on the server code just uploaded
