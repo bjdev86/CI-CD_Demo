@@ -29,7 +29,7 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "index.html, server.js"
+        source: "server.js"
         #target: "/var/www/digitalagconsultants.com"
         target: "/apps/nodejs"
 
