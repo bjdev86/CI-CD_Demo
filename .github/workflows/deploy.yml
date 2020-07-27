@@ -30,22 +30,20 @@ jobs:
         PORT: ${{ secrets.PORT }}
       with:
         source: "index.html"
-        #target: "/var/www/digitalagconsultants.com"
-        target: "/apps/nodejs"
-        #strip_components: 2 # Remove the two folder levels above server.js
+        target: "/var/www/digitalagconsultants.com"
 
     # Copy all the nodejs sources to the droplet servlet directory
-    #- name: Copy node_src via scp (secure copy)
-    #  uses: appleboy/scp-action@master
-    #  env:
-    #    HOST: ${{ secrets.HOST }} 
-    #    USERNAME: ${{ secrets.USERNAME }} 
-    #    PASSWORD: ${{ secrets.PASSWORD }}
-    #    PORT: ${{ secrets.PORT }}
-    #  with:
-    #    source: "index.html"
-    #    target: "/apps/nodejs"
-    #    strip_components: 2 # Remove the two folder levels above server.js
+    - name: Copy node_src via scp (secure copy)
+      uses: appleboy/scp-action@master
+      env:
+        HOST: ${{ secrets.HOST }} 
+        USERNAME: ${{ secrets.USERNAME }} 
+        PASSWORD: ${{ secrets.PASSWORD }}
+        PORT: ${{ secrets.PORT }}
+      with:
+        source: "server.js"
+        target: "/apps/nodejs"
+        strip_components: 2 # Remove the two folder levels above server.js
     
     # Execute PM2 restart command on the server code just uploaded
     - name: Execute PM2 restart command on server.js
