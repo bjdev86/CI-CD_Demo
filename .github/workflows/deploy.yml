@@ -29,9 +29,9 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        source: "server.js"
-        #target: "/var/www/digitalagconsultants.com"
-        target: "/apps/nodejs"
+        source: "index.html, server.js"
+        target: "/var/www/digitalagconsultants.com"
+        #target: "/apps/nodejs"
 
     # Copy all the nodejs sources to the droplet servlet directory
     #- name: Copy node_src via scp (secure copy)
