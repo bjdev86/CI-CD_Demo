@@ -43,7 +43,7 @@ jobs:
       with:
         source: "node/server.js"
         target: "/apps/nodejs"
-        strip_components: 2 # Remove the two folder levels above server.js
+        strip_components: 1 # Remove the two folder levels above server.js
     
     # Execute PM2 restart command on the server code just uploaded
     - name: Execute PM2 restart command on server.js
