@@ -62,4 +62,4 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        script: pm2 restart server
+        script: sudo pm2 restart server
