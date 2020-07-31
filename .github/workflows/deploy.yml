@@ -24,7 +24,7 @@ jobs:
     - name: Publish env context variable 
       env: 
           # Grab the injected 'env' variable, so it can be displayed in the run
-          ENV: ${{ env }}
+          ENV: Hello Enviroment
       # Print out the 'env' variable to the dump file
       run: echo $ENV  
 
