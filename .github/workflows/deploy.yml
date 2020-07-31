@@ -21,7 +21,7 @@ jobs:
     - uses: actions/checkout@v2
 
     # Publish the env context variable to see what it containts 
-    -name: Publish env context variable 
+    - name: Publish env context variable 
       env: 
           # Grab the injected 'env' variable, so it can be displayed in the run
           ENV: ${{ env }}
