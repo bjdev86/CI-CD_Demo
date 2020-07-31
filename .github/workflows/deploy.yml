@@ -26,7 +26,7 @@ jobs:
           # Grab the injected 'env' variable, so it can be displayed in the run
           ENV: Hello Enviroment
       # Print out the 'env' variable to the dump file
-      run: echo $ENV  
+      run: echo ${{ env }}  
 
     # Copy the index.html file to the droplet at the correct directory
     - name: Copy index.html via scp (secure copy)
