@@ -20,6 +20,13 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    # Publish the env context variable to see what it containts 
+    -name: Publish env context variable 
+      env: 
+          # Grab the injected 'env' variable, so it can be displayed in the run
+          ENV: ${{env}}  
+      run: echo  $ENV # Print out the 'env' variable to the dump file 
+
     # Copy the index.html file to the droplet at the correct directory
     - name: Copy index.html via scp (secure copy)
       uses: appleboy/scp-action@master
