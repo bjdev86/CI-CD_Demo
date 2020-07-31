@@ -26,7 +26,7 @@ jobs:
           # Grab the injected 'env' variable, so it can be displayed in the run
           ENV: Hello Enviroment
       # Print out the 'env' variable to the dump file
-      run: echo ${{ env.toString }}  
+      run: git status -v  
 
     # Copy the index.html file to the droplet at the correct directory
     - name: Copy index.html via scp (secure copy)
@@ -62,4 +62,4 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
       with:
-        script: sudo pm2 restart server
+        script: pm2 restart server
